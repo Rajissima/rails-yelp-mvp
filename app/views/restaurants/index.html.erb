@@ -1,0 +1,15 @@
+<div class=" d-flex justify-content-center">
+  <div >
+    Welcome to foodplanet
+  </div>
+</div>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', restaurants_path %> |
